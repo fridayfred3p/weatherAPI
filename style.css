@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#weather {
+    padding: 50px;
+    text-align: center;
+    background-color: aqua;
+    font-size: xx-large;
+    color: rgb(17, 15, 15);
+};
+
+.main {
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+.stocks {
+    font-weight: bold;
+    font-style: initial;
+}

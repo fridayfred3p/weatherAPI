@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css"/>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <Title>Weather</Title>
+</head>
+<body>
+    <header id="weather">Weather Dashboard</header>
+    <div class="container">
+        <div class="row">
+            <div class="location col-4">
+            <h3 class="location-timezone">Search for a city:</h3><br>
+            <form id="regForm" action="">
+                <p><input type="city" id="cityInput" placeholder="Enter City Name"></p>
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </form>
+
+            </div>
+        
+        <div class="main current col-8">
+            <h1 class="cityName">City Name </h1><br><span class="region"></span>
+            <p>Temperature:<br><span id="temperature"></span>F</p><br>
+            <p>Humidity:<br><span id="humidity"></span>%</p><br>
+            <p>Wind Speed:<br><span id="windSpeed"></span>mph</p><br>
+            <p>Description:<br><span id="description"></span>.</p>
+        </div>
+        </div>
+        <br>
+    <div class="container forecast">
+        <div class="row">
+            <p>5-day Forecast:</p>
+            <br>
+            <br>
+            <div class="card-deck">
+                <div class="card bg-primary">
+                    <div class="card-body">
+                        <p class="forecastDate firstDay">Date</p>
+                        <div class="card-body text-center">
+                        <div>Temp: <span id="temp1"></span>F<br> Humidity:<span id="humid1"></span>%</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card bg-primary">
+                    <div class="card-body">
+                        <p class="forecastDate secondDay">Date</p>
+                        <div class="card-body text-center">
+                            <div>Temp: <span id="temp2"></span>F<br> Humidity:<span id="humid2"></span>%</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card bg-primary">
+                    <div class="card-body">
+                        <p class="forecastDate thirdDay">Date</p>
+                        <div class="card-body text-center">
+                            <div>Temp: <span id="temp3"></span>F<br> Humidity:<span id="humid3"></span>%</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="card bg-primary">
+                    <div class="card-body">
+                        <p class="forecastDate fourthDay">Date</p>
+                        <div class="card-body text-center">
+                            <div>Temp: <span id="temp4"></span>F<br> Humidity:<span id="humid4"></span>%</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="card bg-primary">
+                    <div class="card-body">
+                        <p class="forecastDate fifthDay">Date</p>
+                        <div class="card-body text-center">
+                            <div>Temp: <span id="temp5"></span>F<br> Humidity:<span id="humid5"></span>%</div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+<script src="scrip.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

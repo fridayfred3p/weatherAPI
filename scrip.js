@@ -116,18 +116,15 @@
                 humidFri.textContent = data.daily[4].humidity;
                 
                 const img1 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[0].weather[0].icon + ".png");
-                day1Icon.append(img1);
+                day1Icon.empty().append(img1);
                 const img2 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon + ".png");
-                day2Icon.append(img2);
+                day2Icon.empty().append(img2);
                 const img3 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon + ".png");
-                
-                day3Icon.append(img3);
+                day3Icon.empty().append(img3);
                 const img4 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon + ".png");
-                
-                day4Icon.append(img4);
+                day4Icon.empty().append(img4);
                 const img5 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon + ".png");
-                
-                day5Icon.append(img5);
+                day5Icon.empty().append(img5);
                 
             })
         });

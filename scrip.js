@@ -60,8 +60,9 @@
     console.log(getsavedcity);
     if (getsavedcity.length) {
     for (let i = 0; i<getsavedcity.length; i++) {
-    const listofcities = $("<li>").text(getsavedcity[i]);
-    cityList.append(listofcities);
+    const listofcities = $("<li>").text(getsavedcity.slice(-1).pop());
+    console.log(listofcities);
+    cityList.append(listofcities[listofcities.length-1]);
     };
     }else{
         return;

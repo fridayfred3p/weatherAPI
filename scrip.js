@@ -5,7 +5,8 @@
     //Setting variable for the lattitude and longitude of the user
     let long;
     let lat;
-
+    
+    const savedData = [];
     const temparture = document.getElementById("#temparture");
     const humid = document.querySelector("#humidity");
     const wind = document.querySelector("#windSpeed");
@@ -19,11 +20,11 @@
     const area = document.querySelector(".region")
     
 
-    const day1Icon = document.querySelector(".icon");
-    const day2Icon = document.querySelector(".icon2");
-    const day3Icon = document.querySelector(".icon3");
-    const day4Icon = document.querySelector(".icon4");
-    const day5Icon = document.querySelector(".icon5");
+    const day1Icon = $(".icon");
+    const day2Icon = $(".icon2");
+    const day3Icon = $(".icon3");
+    const day4Icon = $(".icon4");
+    const day5Icon = $(".icon5");
     
     const tempMon = document.querySelector("#temp1");
     const tempTues = document.querySelector("#temp2");
@@ -37,15 +38,35 @@
     const humidThurs = document.querySelector("#humid4");
     const humidFri = document.querySelector("#humid5");
     
+    const cityList = $(".history");
+    
+    
+
+
     // event listener
     const submitButton = document.querySelector(".btn");
     submitButton.addEventListener("click", function (event) {
         
         event.preventDefault();
+
+
         const cityInput = document.querySelector("#cityInput").value;
+        savedData.push(cityInput);
+        localStorage.setItem("userInput", JSON.stringify(savedData));
         console.log(cityInput);
         const weatherManualApi = "https://api.openweathermap.org/data/2.5/weather?q="+ cityInput +"&units=imperial&appid=35cafeda5ccb6feec8a6df5368bddb0a"
 
+        const getsavedcity = JSON.parse(localStorage.getItem("userInput"));
+    console.log(getsavedcity);
+    if (getsavedcity.length) {
+    for (let i = 0; i<getsavedcity.length; i++) {
+    const listofcities = $("<li>").text(getsavedcity[i]);
+    cityList.append(listofcities);
+    };
+    }else{
+        return;
+    };
+    
         fetch(weatherManualApi).then(data => {
             return data.json();
         })
@@ -94,7 +115,19 @@
                 humidThurs.textContent = data.daily[3].humidity;
                 humidFri.textContent = data.daily[4].humidity;
                 
-
+                const img1 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[0].weather[0].icon + ".png");
+                day1Icon.append(img1);
+                const img2 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon + ".png");
+                day2Icon.append(img2);
+                const img3 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon + ".png");
+                
+                day3Icon.append(img3);
+                const img4 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon + ".png");
+                
+                day4Icon.append(img4);
+                const img5 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon + ".png");
+                
+                day5Icon.append(img5);
                 
             })
         });
@@ -148,8 +181,20 @@
                 humidWed.textContent = data.daily[2].humidity;
                 humidThurs.textContent = data.daily[3].humidity;
                 humidFri.innerHTML = data.daily[4].humidity;
-                //let val = data.daily[1].weather[1].icon;
-                //day1Icon.innerHTML = <img src="http://openweathermap.org/img/wn/"+ val + ".png"  alt ="weathericon">
+                
+                const img1 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[0].weather[0].icon + ".png");
+                day1Icon.append(img1);
+                const img2 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon + ".png");
+                day2Icon.append(img2);
+                const img3 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon + ".png");
+                
+                day3Icon.append(img3);
+                const img4 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon + ".png");
+                
+                day4Icon.append(img4);
+                const img5 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon + ".png");
+                
+                day5Icon.append(img5);
                 
                 
                 

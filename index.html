@@ -20,15 +20,15 @@
                 <p><input type="city" id="cityInput" placeholder="Enter City Name"></p>
                 <input class="btn btn-primary" type="submit" value="Submit">
             </form>
-
+            <div>Historic City Searched: <div class="history"></div></div>
             </div>
         
         <div class="main current col-8">
             <h1 class="cityName">City Name </h1><br><span class="region"></span>
-            <p>Temperature:<br><span id="temperature"></span>F</p><br>
-            <p>Humidity:<br><span id="humidity"></span>%</p><br>
-            <p>Wind Speed:<br><span id="windSpeed"></span>mph</p><br>
-            <p>Description:<br><span id="description"></span>.</p>
+            <p class="stocks">Temperature:<br><span id="temperature"></span>F</p><br>
+            <p class="stocks">Humidity:<br><span id="humidity"></span>%</p><br>
+            <p class="stocks">Wind Speed:<br><span id="windSpeed"></span>mph</p><br>
+            <p class="stocks">Description:<br><span id="description"></span>.</p>
         </div>
         </div>
         <br>
@@ -39,42 +39,47 @@
             <br>
             <div class="card-deck">
                 <div class="card bg-primary">
-                    <div class="card-body">
+                    <div class="card-header ">
                         <p class="forecastDate firstDay">Date</p>
-                        <div class="card-body ">
-                        <div>Temp:<span id="temp1"></span>F<br> Humidity:<span id="humid1"></span>%</div>
+                        <div class="card-body text-center">
+                            <p class="card-text"><span class="icon"></span></p>
+                        <div>Temp: <span id="temp1"></span>F<br> Humidity:<span id="humid1"></span>%</div>
                     </div>
                     </div>
                 </div>
                 <div class="card bg-primary">
-                    <div class="card-body">
+                    <div class="card-header ">
                         <p class="forecastDate secondDay">Date</p>
-                        <div class="card-body ">
-                            <div>Temp:<span id="temp2"></span>F<br> Humidity:<span id="humid2"></span>%</div>
+                        <div class="card-body text-center">
+                            <p class="card-text"><span class="icon2"></span></p>
+                            <div>Temp: <span id="temp2"></span>F<br> Humidity:<span id="humid2"></span>%</div>
                     </div>
                     </div>
                 </div>
                 <div class="card bg-primary">
-                    <div class="card-body">
+                    <div class="card-header ">
                         <p class="forecastDate thirdDay">Date</p>
-                        <div class="card-body ">
-                            <div>Temp:<span id="temp3"></span>F<br> Humidity:<span id="humid3"></span>%</div>
+                        <div class="card-body text-center">
+                            <p class="card-text"><span class="icon3"></span></p>
+                            <div>Temp: <span id="temp3"></span>F<br> Humidity:<span id="humid3"></span>%</div>
                             </div>
                     </div>
                 </div>
                 <div class="card bg-primary">
-                    <div class="card-body">
+                    <div class="card-header ">
                         <p class="forecastDate fourthDay">Date</p>
-                        <div class="card-body ">
-                            <div>Temp:<span id="temp4"></span>F<br> Humidity:<span id="humid4"></span>%</div>
+                        <div class="card-body text-center">
+                            <p class="card-text"><span class="icon4"></span></p>
+                            <div>Temp: <span id="temp4"></span>F<br> Humidity:<span id="humid4"></span>%</div>
                             </div>
                     </div>
                 </div>
                 <div class="card bg-primary">
-                    <div class="card-body">
+                    <div class="card-header ">
                         <p class="forecastDate fifthDay">Date</p>
-                        <div class="card-body">
-                            <div>Temp:<span id="temp5"></span>F<br> Humidity:<span id="humid5"></span>%</div>
+                        <div class="card-body text-center">
+                            <p class="card-text"><span class="icon5"></span></p>
+                            <div>Temp: <span id="temp5"></span>F<br> Humidity:<span id="humid5"></span>%</div>
                             </div>
                     </div>
                 </div>
